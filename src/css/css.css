@@ -1,0 +1,409 @@
+body {
+    font: 400 13px Arial
+}
+
+
+.reg-form {
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdf5ff;
+    align-items: center;
+    height: 270px;
+}
+
+.reg-form_field {
+    width: 250px;
+    outline: none;
+    border: none;
+    background-color: #fdf5ff;
+    font-size: 13px;
+    color: #515151;
+}
+
+.reg-form_h1 {
+    font-size: 26px;
+    color: #756e76;
+}
+
+.reg-form_text {
+    margin: 0;
+    font-size: 14px;
+    color: #756e76;
+}
+
+.reg-form_button {
+    margin: 20px auto 0 auto;
+    width: 130px;
+    outline: none;
+    border: 1px solid #756e76;
+    background-color: #fdf5ff;
+    color: #756e76;
+    border-radius: 25px;
+    height: 28px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.reg-form_button:hover {
+    background-color: #f8effa;
+    transition: 0.2s;
+}
+
+.reg-form_field_err {
+    border: none;
+    color: #5c1b18;
+    font-size: 11px;
+    margin: 0 auto;
+}
+
+.registration-field {
+    width: 250px;
+    margin: 20px auto 0 auto;
+    background-color: #fdf5ff;
+    font-size: 14px;
+    color: #515151;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+.personal-form {
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdf5ff;
+    align-items: center;
+    height: 340px;
+}
+
+.personal-field {
+    width: 250px;
+    margin: 20px auto 0 auto;
+    background-color: #fdf5ff;
+    font-size: 14px;
+    color: #515151;
+    display: flex;
+    align-items: center;
+}
+
+
+.changeInfo {
+    background-color: #f8effa;
+    border-bottom: 1px solid #756e76;
+    color: #756e76;
+}
+
+.personal-group-list {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+}
+
+.personal-group-item {
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+.search-form {
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdf5ff;
+    align-items: flex-start;
+    height: 360px;
+}
+
+.search-wrap {
+    width: 100%;
+}
+
+.search-input {
+    flex-grow: 1;
+    margin-right: 5px;
+    border: none;
+    background-color: #fdf5ff;
+    border-bottom: 1px solid #756e76;
+    outline: none;
+}
+
+
+.search-input:focus {
+    background-color: #f8effa;
+    transition: 0.2s;
+}
+
+.search-input-line {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    /*box-sizing: border-box;*/
+}
+
+
+.search-button {
+    outline: none;
+    border: 1px solid #756e76;
+    background-color: #fdf5ff;
+    color: #756e76;
+    border-radius: 25px;
+    height: 24px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.search-button-long {
+    width: 130px;
+}
+
+.search-button-short {
+    width: 80px;
+}
+
+.search-button:hover {
+    background-color: #f8effa;
+    transition: 0.2s;
+}
+
+.search-wrap-bottom {
+    margin: 10px 0 0 10px
+}
+
+
+
+
+
+
+.autocomplete-form {
+    margin: 10px;
+}
+
+.autocomplete-list {
+    margin: 0;
+    padding: 0;
+}
+
+.autocomplete-item {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    padding: 5px 0;
+    color: #756e76;
+    cursor: pointer;
+}
+
+.autocomplete-item:hover {
+    background-color: #f8effa;
+    transition: 0.2s;
+}
+
+
+
+
+
+.td-query {
+    border-right: 1px solid #aaa3ab;
+    border-bottom: 1px solid #aaa3ab;
+    width: 300px;
+}
+
+.td-date {
+    border-right: 1px solid #aaa3ab;
+    border-bottom: 1px solid #aaa3ab;
+    width: 130px;
+}
+
+.td-answer {
+    border-bottom: 1px solid #aaa3ab;
+    width: 260px;
+}
+
+
+.tr-data {
+    border-bottom: 1px solid #aaa3ab;
+}
+
+
+
+#container {
+    box-sizing: border-box;
+    width: 500px;
+}
+
+
+
+
+
+
+
+.tree_list {
+
+}
+
+.tree_item {
+    list-style-type: none;
+}
+
+.tree_item-el {
+    display: flex;
+    align-items: center;
+}
+
+.tree_plus {
+    font-size: 24px;
+    color: #37cb3c;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.tree_minus {
+    font-size: 24px;
+    color: #d5272f;
+    cursor: pointer;
+    margin-bottom: 3px;
+    margin-right: 5px;
+}
+
+
+.tree_item-el-select:before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    border-top: .5em solid;
+    border-right: .45em solid transparent;
+    border-left: .45em solid transparent;
+    top: -1px;
+    margin-right: 4px;
+    opacity: .75;
+    transition: all .3s cubic-bezier(.4,0,.2,1);
+}
+
+.tree_item-el-no-select:before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    border-top: .5em solid;
+    border-right: .45em solid transparent;
+    border-left: .45em solid transparent;
+    top: -1px;
+    margin-right: 4px;
+    opacity: .75;
+    transform: rotate(-90deg);
+    transition: all .3s cubic-bezier(.4,0,.2,1);
+}
+
+.highlight_all_mail_flag_checkbox_icon {
+    width: 4px;
+    height: 14px;
+    display: block;
+    border-bottom: 3px solid #6a6666;
+    border-right: 2px solid #6a6666;
+    transform: skewX(16deg) rotate(47deg) scale(0.85);
+    margin: -2px 0px 0px 5px;
+}
+
+
+
+.highlight_all_mail_flag_checkbox {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #d5d2d2;
+    box-shadow: inset #4f4d4d;
+    cursor: pointer;
+    display: block;
+    border-radius: 3px;
+    margin-right: 5px;
+    position: relative;
+}
+
+
+.highlight_all_mail_flag_checkbox_icon_minus {
+    width: 9px;
+    height: 14px;
+    display: block;
+    border-bottom: 2px solid #6a6666;
+    margin: -7px 0px 0px 3px;
+}
+
+.tree_input {
+    display: none;
+}
+
+
+
+
+
+.notice-field {
+    width: 250px;
+    background-color: #fdf5ff;
+    font-size: 14px;
+    color: #515151;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.notice-field:hover {
+    background-color: #f8effa;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+.notice_count {
+    font-weight: 600;
+}
+
+.notice_count-read {
+    font-weight: 100;
+}
+
+.notice_name {
+    font-size: 16px;
+}
+
+
+.notice-form {
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdf5ff;
+    align-items: center;
+    height: 230px;
+}
+
+.td-no-read {
+    font-weight: 600;
+}
+
+.tr-data-notice {
+    border-bottom: 1px solid #aaa3ab;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+

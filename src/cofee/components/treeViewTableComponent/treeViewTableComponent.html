@@ -1,0 +1,6 @@
+<table>
+    <tr ng-repeat="item in treeArr track by $index">
+        <td>{{item.name}}</td>
+        <tree-view-table-component tree-arr="item.children" ng-show="item.showChildren" select="select" selected="selected" multiple="multiple" send-child="sendChild"></tree-view-table-component>
+    </tr>
+</table>

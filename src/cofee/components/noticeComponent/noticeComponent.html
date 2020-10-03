@@ -1,0 +1,15 @@
+<div class="notice-form">
+    <h1 class="reg-form_h1">Notices</h1>
+    <div class="notice-field" ui-sref="notice.table">
+        <div class="notice_name">All</div>
+        <span class="notice_count">{{noticeStorage.getNotices().length}}</span>
+    </div>
+    <div class="notice-field">
+        <div class="notice_name">New</div>
+        <span class="notice_count-read" ng-class="{'notice_count': noticeStorage.notices|noticesNewCount}">{{noticeStorage.notices|noticesNewCount}}</span>
+    </div>
+    <div class="notice-field">
+        <div class="notice_name">Read</div>
+        <span class="notice_count-read">{{noticeStorage.notices|noticesReadCount}}</span>
+    </div>
+</div>

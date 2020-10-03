@@ -1,0 +1,28 @@
+{
+  "name": "coffee_test",
+  "version": "1.0.0",
+  "description": "coffee_test",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "1.4.9",
+    "angular-ui-router": "0.3.1",
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-angular-embed-templates": "^2.3.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-coffee": "^3.0.3",
+    "gulp-concat": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./node_modules/gulp/bin/gulp.js build",
+    "start-dev": "node ./node_modules/gulp/bin/gulp.js project:watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "coffeescript": "^2.5.1"
+  }
+}

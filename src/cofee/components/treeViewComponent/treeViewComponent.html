@@ -1,0 +1,17 @@
+<ul class="tree_list">
+    <li class="tree_item" ng-repeat="item in treeArr track by $index">
+        <div class="tree_item-el">
+            <div ng-class="{'tree_item-el-no-select': (!item.showChildren && item.children), 'tree_item-el-select': (item.showChildren && item.children)}"
+                 ng-click="item.showChildren=!item.showChildren"></div>
+            <input ng-show="multiple" class='tree_input' type="checkbox" ng-model="item.select">
+            <span ng-show="multiple" class="highlight_all_mail_flag_checkbox" ng-click="selectCheckbox(item)">
+                <span class="highlight_all_mail_flag_checkbox_icon" ng-show="item.select"></span>
+                <span class="highlight_all_mail_flag_checkbox_icon_minus" ng-show="item.select == false"></span>
+            </span>
+            <div ng-show="multiple" class="tree_item-name" ng-click="showChild(item)">{{item.name}}</div>
+            <div ng-show="!multiple" class="tree_item-name" ng-click="sendSelect(item)">{{item.name}}</div>
+        </div>
+        <tree-view-component tree-arr="item.children" ng-show="item.showChildren" multiple="multiple" selected="selected" show-child="showChild" change-select="changeSelect"
+                             parent="item" send-select="sendSelect" send-child="sendChild"></tree-view-component>
+    </li>
+</ul>
