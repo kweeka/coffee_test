@@ -1,0 +1,5 @@
+<div>
+    <input type="{{type}}" placeholder="{{placeholder}}" ng-model="value" class="reg-form_field" ng-blur="change(value)" ng-readonly='readonlyDelete'
+           ng-class="{changeInfo: !readonlyDelete}"/></br>
+    <p class="reg-form_field_err" ng-show="errorField">{{errorField|concatArray}}</p>
+</div>

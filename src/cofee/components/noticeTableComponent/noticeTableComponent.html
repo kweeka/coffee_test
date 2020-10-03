@@ -1,0 +1,14 @@
+<table>
+    <tr class="tr-data">
+        <th>From</th>
+        <th>Topic</th>
+        <th>Text</th>
+        <th>Date</th>
+    </tr>
+    <tr ng-repeat="notice in noticeStorage.notices" class="tr-data-notice" ui-sref="notice.read({ id: notice })" ng-click="readNotice(notice)">
+        <td class="td-query">{{notice.from}}</td>
+        <td class="td-query" ng-class="{'td-no-read': !notice.read}">{{notice.topic}}</td>
+        <td class="td-query">{{notice.text}}</td>
+        <td class="td-answer">{{notice.date|dateFilter}}</td>
+    </tr>
+</table>

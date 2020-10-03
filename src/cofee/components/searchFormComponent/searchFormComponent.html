@@ -1,0 +1,17 @@
+<div class="search-form">
+    <div class="search-wrap">
+        <div class="search-input-line">
+            <input class="search-input" type="text" placeholder="Enter query" ng-model="query">
+            <button class="search-button-short search-button" ng-click="search()">SEARCH</button>
+        </div>
+    </div>
+    <div class="search-wrap">
+        <autocomplete-component ng-show="hide" words="resultSearch" check="query" hide="hide"></autocomplete-component>
+    </div>
+    <div class="search-wrap-bottom">
+        <button class="search-button-long search-button" ng-click="showHistoryQuery()">Show history query</button>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,14 @@
+<div class="reg-form">
+    <h1 class="reg-form_h1">Registration</h1>
+    <p class="reg-form_text">Please, enter your details:</p>
+    <div class="registration-field">
+        <input-component placeholder="'Name'" value="userData.name" type="'text'" error="userDataErr.name" change="changeName" readonly-delete="false"></input-component>
+    </div>
+    <div class="registration-field">
+        <input-component placeholder="'Email'" value="userData.email" error="userDataErr.email" type="'text'" change="changeEmail" readonly-delete="false"></input-component>
+    </div>
+    <div class="registration-field">
+        <input-component placeholder="'Password'" value="userData.password" error="userDataErr.password" type="'text'" change="changePassword" readonly-delete="false"></input-component>
+    </div>
+    <button class="reg-form_button" ng-click="registration(userData.name, userData.email, userData.password)">SEND</button>
+</div>

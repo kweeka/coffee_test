@@ -1,0 +1,43 @@
+<div>
+    <div>
+        <button ng-click="getRequestHistoryAll = !getRequestHistoryAll">Get request history all</button>
+        <button ng-click="sendByDay()">Get request history by day</button>
+        <button ng-click="showTreeList = !showTreeList">Tree list</button>
+        <button ng-click="showTreeListTable = !showTreeListTable">Tree list Table</button>
+        <button ng-click="formChart()">Form chart</button>
+        <button ng-click="backQuery()">Back</button>
+    </div>
+    <table ng-show="getRequestHistoryAll">
+        <tr class="tr-data">
+            <th class="td-query">Query</th>
+            <th class="td-date">Date</th>
+            <th class="td-answer">Answer</th>
+        </tr>
+        <tr class="tr-data" ng-repeat="item in historySearch">
+            <td class="td-query">{{item.query}}</td>
+            <td class="td-date">{{item.date|dateFilter}}</td>
+            <td class="td-answer">{{item.answer|concatArray}}</td>
+        </tr>
+    </table>
+    <table ng-show="getRequestHistoryByDay">
+        <tr class="tr-data">
+            <th class="td-date">Date</th>
+            <th class="td-date">Count</th>
+            <th class="td-query">Query</th>
+        </tr>
+        <tr class="tr-data" ng-repeat="item in historySearchByDay">
+            <td class="td-date">{{item.date}}</td>
+            <td class="td-date">{{item.items.length}}</td>
+            <td class="td-query">{{item.items|concatArray}}</td>
+        </tr>
+    </table>
+    <div id="container" ng-show="showChart">
+    </div>
+    <div ng-show="showTreeList">
+        <button ng-click="multiple = !multiple">Multiple</button>
+        <div ng-if="!multiple">{{selectOne.name}}</div>
+        <div ng-if="multiple">{{selectTree|concatArray}}</div>
+        <tree-view-component tree-arr="root" multiple="multiple" show-child="showChild" selected="selected" parent="null" change-select="changeSelect"
+                             send-select="sendSelect" send-child="sendChild"></tree-view-component>
+    </div>
+</div>

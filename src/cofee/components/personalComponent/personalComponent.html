@@ -1,0 +1,33 @@
+<div class="personal-form">
+    <h1 class="reg-form_h1">Personal date</h1>
+    <div class="personal-field">
+        <span>Name:</span>
+        <input-component placeholder="'Name'" value="userData.name" type="'text'" error="userDataErr.name" change="changeName" readonly-delete="readonlyDelete"></input-component>
+    </div>
+    <div class="personal-field">
+        <span>Email:</span>
+        <input-component placeholder="'Email'" value="storage.user.email" error="userDataErr.email" type="'text'" change="changeEmail" readonly-delete="true"></input-component>
+    </div>
+    <div class="personal-field" ng-show="!readonlyDelete">
+        <span>Password:</span>
+        <input-component placeholder="'Password'" value="userData.password" type="'text'" error="userDataErr.password" change="changePassword" readonly-delete="readonlyDelete"></input-component>
+    </div>
+    <div class="personal-field" ng-show="!readonlyDelete">
+        <span>Password again:</span>
+        <input-component placeholder="'Password again'" value="userData.passwordAgain" type="'text'" error="userDataErr.passwordAgain" change="changePasswordAgain" readonly-delete="readonlyDelete"></input-component>
+    </div>
+    <div class="personal-field" ng-show="!showChandeGroup">Groups: {{storage.user.group|concatArray}}</div>
+    <div ng-show="showChandeGroup">
+        <div class="personal-field">Groups: {{checkedGroups|concatArray}}</div>
+        <ul class="personal-group-list">
+            <li ng-repeat="item in storage.groupsAll" class="personal-group-item" ng-click="selected()">
+                <input type="checkbox" ng-model="item.checked">{{item.name}}
+            </li>
+        </ul>
+    </div>
+    <button class="reg-form_button" ng-click="changeDatePersonal()" ng-show="readonlyDelete">Change date</button>
+    <div ng-show="!readonlyDelete">
+        <button class="reg-form_button" ng-click="sendChangeDatePersonal()">OK</button>
+        <button class="reg-form_button" ng-click="cancel()">CANCEL</button>
+    </div>
+</div>
